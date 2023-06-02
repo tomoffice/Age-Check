@@ -1,0 +1,22 @@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const ageVerifyModal = document.getElementById("age-verification-modal");
+  const ageVerifyYesButton = document.getElementById("age-verify-yes-button");
+  const ageVerifyNoButton = document.getElementById("age-verify-no-button");
+
+  ageVerifyYesButton.addEventListener("click", function() {
+    ageVerifyModal.classList.add("hidden");
+    localStorage.setItem("ageVerified", true); // 將驗證狀態保存至本地儲存
+  });
+
+  ageVerifyNoButton.addEventListener("click", function() {
+    ageVerifyModal.classList.add("hidden");
+    localStorage.setItem("ageVerified", false); // 將驗證狀態保存至本地儲存
+    window.location.href = "https://www.google.com"; // 導向至Google首頁
+  });
+
+  if (!localStorage.getItem("ageVerified")) {
+    ageVerifyModal.classList.remove("hidden");
+  }
+});
+</script>

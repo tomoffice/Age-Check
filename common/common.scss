@@ -1,0 +1,68 @@
+#age-verification-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  z-index: 9999;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#age-verification-modal.hidden {
+  display: none;
+}
+
+#age-verification-modal h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#age-verification-modal p {
+  margin-bottom: 10px;
+}
+
+#age-verification-modal button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 18px;
+  background-color: #337ab7;
+}
+
+#age-verification-modal button#age-verify-yes-button {
+  background-color: #4CAF50; /* 綠色 */
+}
+
+#age-verification-modal button#age-verify-no-button {
+  background-color: #FF0000; /* 紅色 */
+}
+
+#age-verification-modal button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  #age-verification-modal {
+    font-size: 16px;
+  }
+  
+  #age-verification-modal h2 {
+    font-size: 20px;
+  }
+  
+  #age-verification-modal button {
+    font-size: 16px;
+  }
+}
